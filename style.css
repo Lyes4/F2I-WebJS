@@ -16,6 +16,7 @@ body
 {
     display: block;
     font-size: larger;
+    margin-bottom: 50px;
 }
 
 .Textbox
@@ -44,7 +45,7 @@ body
 div[id="DynamicTable"]
 {
     height: 300px;
-    margin-top: 50px;
+    margin-top: 30px;
     border-top: 5px solid white;
     border-bottom: 5px solid white;
 }
@@ -56,7 +57,6 @@ table
 
 div[id="DynamicTable"] td
 {
-    /* border: 2px solid transparent; */
     background-color: whitesmoke;
     text-align: center;
 }

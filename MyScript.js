@@ -1,5 +1,6 @@
 
-function BtnClick()
+
+function SayHello()
 {
     // window.alert("J'ai cliqué sur mon Div");
 
@@ -12,14 +13,29 @@ function BtnClick()
     MyDiv.innerHTML = "Bonjour <strong>" + MyText.value + "</strong>";
 }
 
-function CreateTable()
+
+function AnimateHello()
+{
+
+    const MyDiv = document.getElementById("lblHello");
+    const MyDivData = getComputedStyle(MyDiv);
+
+    let PadLeft = Number(MyDivData.paddingLeft.substring(0, MyDivData.paddingLeft.length - 2))
+    // console.log(PadLeft);
+    MyDiv.style.paddingLeft = (PadLeft + 10) + "px" ;
+    // console.log(MyDivData.paddingLeft.substring(0, MyDivData.paddingLeft.length - 2));
+
+}
+
+
+function CreateTable(
+    AddNumbersInCells)
 {
     const MyTable = document.getElementById("DynamicTable");
     const TableData = getComputedStyle(MyTable);
 
     const NumberStepY = 6;
     const NumberStepX = 12;
-    const StepBorderHeight = 2;
     const StepHeight = Math.floor(TableData.height.substring(0, TableData.height.length - 2) / NumberStepY);
     const StepWidth = Math.floor(TableData.width.substring(0, TableData.width.length - 2) / NumberStepX);
 
@@ -32,8 +48,10 @@ function CreateTable()
         
         for(column = 0; column < NumberStepX; column++)
         {
-            
-            InnerHTML += "<td style='width: " + StepWidth + "px'>" + row + " : " + column + "</td>";
+            InnerHTML += "<td style='width: " + StepWidth + "px'>"
+            if(AddNumbersInCells)
+                InnerHTML += row + " : " + column;
+            InnerHTML += "</td>";
         }
 
         InnerHTML += "</tr>";

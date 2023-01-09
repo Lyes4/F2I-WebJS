@@ -27,20 +27,26 @@
         
         <div
             class="Button"
-            onclick="BtnClick();">
+            onclick="SayHello();">
             Dire bonjour
         </div>
     
         <div
             id="lblHello" 
-            class="Label BigLabel">
+            class="Label BigLabel"
+            onmouseover="AnimateHello();">
             ...
         </div>
         
         <div
             class="Button"
-            onclick="CreateTable();">
-            Créer la table dynamique
+            onclick="CreateTable(true);">
+            Créer la table dynamique (avec numéros)
+        </div>
+        <div
+            class="Button"
+            onclick="CreateTable(false);">
+            Créer la table dynamique (sans numéros)
         </div>
 
         <div
