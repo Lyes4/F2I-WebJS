@@ -41,7 +41,7 @@ body
     cursor: pointer;
 }
 
-div[id="LightRoad"]
+div[id="DynamicTable"]
 {
     height: 300px;
     margin-top: 50px;
@@ -49,13 +49,19 @@ div[id="LightRoad"]
     border-bottom: 5px solid white;
 }
 
-div[id="LightRoad"] td
+table
 {
-    border: 2px solid transparent;
-    background-color: whitesmoke;
+    border-collapse: collapse;
 }
 
-div[id="LightRoad"] td:hover
+div[id="DynamicTable"] td
+{
+    /* border: 2px solid transparent; */
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+div[id="DynamicTable"] td:hover
 {
     background-color: transparent;
 }
