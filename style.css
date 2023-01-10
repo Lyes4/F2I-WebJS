@@ -42,7 +42,7 @@ body
     cursor: pointer;
 }
 
-div[id="DynamicTable"]
+div[id="DynamicTableContainer"]
 {
     height: 300px;
     margin-top: 30px;
@@ -55,13 +55,13 @@ table
     border-collapse: collapse;
 }
 
-div[id="DynamicTable"] td
+div[id="DynamicTableContainer"] td
 {
     background-color: whitesmoke;
     text-align: center;
 }
 
-div[id="DynamicTable"] td:hover
+div[id="DynamicTableContainer"] td:hover
 {
     background-color: transparent;
 }

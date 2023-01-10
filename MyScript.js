@@ -31,8 +31,8 @@ function AnimateHello()
 function CreateTable(
     AddNumbersInCells)
 {
-    const MyTable = document.getElementById("DynamicTable");
-    const TableData = getComputedStyle(MyTable);
+    const MyTableContainer = document.getElementById("DynamicTableContainer");
+    const TableData = getComputedStyle(MyTableContainer);
 
     const NumberStepY = 6;
     const NumberStepX = 12;
@@ -59,6 +59,6 @@ function CreateTable(
     InnerHTML += "</tbody></table>";
 
     // alert(InnerHTML);
-    MyTable.innerHTML = InnerHTML;
+    MyTableContainer.innerHTML = InnerHTML;
     
 }
